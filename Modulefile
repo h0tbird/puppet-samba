@@ -1,0 +1,8 @@
+name            'h0tbird-samba'
+version         '0.0.1'
+source          'https://github.com/h0tbird/puppet-samba'
+author          'Marc Villacorta'
+license         'GPL'
+summary         'Samba Module'
+description     'Manages the SAMBA services.'
+project_page    'https://github.com/h0tbird/puppet-samba'
