@@ -58,21 +58,22 @@
 #------------------------------------------------------------------------------
 class samba (
 
-    $ensure          = running,
-    $version         = present,
-    $workgroup       = 'MYGROUP',
-    $server_string   = 'Samba Server Version %v',
-    $netbios_name    = $hostname,
-    $interfaces      = 'lo eth0',
-    $hosts_allow     = '127.',
-    $log_file        = '/var/log/samba/%m.log',
-    $max_log_size    = '50',
-    $security        = 'user',
-    $passdb_backend  = 'tdbsam',
+    $ensure          = undef,
+    $version         = undef,
+    $workgroup       = undef,
+    $server_string   = undef,
+    $netbios_name    = undef,
+    $interfaces      = undef,
+    $hosts_allow     = undef,
+    $log_file        = undef,
+    $max_log_size    = undef,
+    $security        = undef,
+    $passdb_backend  = undef,
     $realm           = undef,
     $password_server = undef,
-    $load_printers   = 'no',
-    $cups_options    = undef
+    $load_printers   = undef,
+    $cups_options    = undef,
+    $shares          = undef,
 
 ) {
 

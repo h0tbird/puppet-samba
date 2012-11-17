@@ -14,6 +14,7 @@ class samba::config {
     # Collect variables:
     $templates = getvar("${module_name}::params::templates")
     $configs   = getvar("${module_name}::params::configs")
+    $shares    = getvar("${module_name}::shares")
 
     # Define the target file:
     concat { $configs[0]: ensure => present }
@@ -25,4 +26,7 @@ class samba::config {
         content => template("${templates}/smb.conf_header.erb"),
         order   => '00',
     }
+
+    # Shares:
+    create_resources(samba::share, $shares)
 }
